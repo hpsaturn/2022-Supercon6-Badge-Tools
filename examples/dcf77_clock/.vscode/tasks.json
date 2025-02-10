@@ -1,0 +1,19 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Supercon6 Badget Build",
+        "type": "shell",
+        "command": "../../assembler/assemble.py ${fileBasename}",
+        "options": {},
+        "problemMatcher": [
+          "$gcc"
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        }
+      }
+    ]
+}
+
