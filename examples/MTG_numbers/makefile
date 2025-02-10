@@ -1,4 +1,4 @@
-TARGET = pong
+TARGET = mtg_numbers
 PORT = /dev/ttyUSB0
 CC = ../../assembler/assemble.py
 

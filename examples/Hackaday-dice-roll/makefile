@@ -1,4 +1,4 @@
-TARGET = pong
+TARGET = dice_roll
 PORT = /dev/ttyUSB0
 CC = ../../assembler/assemble.py
 

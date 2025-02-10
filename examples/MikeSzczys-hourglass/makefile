@@ -1,4 +1,4 @@
-TARGET = pong
+TARGET = grains
 PORT = /dev/ttyUSB0
 CC = ../../assembler/assemble.py
 

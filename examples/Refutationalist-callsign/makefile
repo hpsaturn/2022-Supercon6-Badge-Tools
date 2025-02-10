@@ -1,4 +1,4 @@
-TARGET = pong
+TARGET = ktqa
 PORT = /dev/ttyUSB0
 CC = ../../assembler/assemble.py
 

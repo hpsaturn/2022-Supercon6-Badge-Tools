@@ -1,5 +1,5 @@
 TARGET:=life
-PORT:=/dev/ttyUSB1
+PORT:=/dev/ttyUSB0
 ASSEMBLER:=../../assembler/assemble.py
 
 all: $(TARGET).hex flash

@@ -1,4 +1,4 @@
-TARGET = pong
+TARGET = demon
 PORT = /dev/ttyUSB0
 CC = ../../assembler/assemble.py
 

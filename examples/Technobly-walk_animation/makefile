@@ -1,4 +1,4 @@
-TARGET = pong
+TARGET = walk_animation
 PORT = /dev/ttyUSB0
 CC = ../../assembler/assemble.py
 

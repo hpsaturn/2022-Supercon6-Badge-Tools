@@ -1,5 +1,5 @@
 TARGET=symbolscroll
-PORT?=/dev/ttyUSB1
+PORT?=/dev/ttyUSB0
 CC=../../assembler/assemble.py
 
 all: assemble program
