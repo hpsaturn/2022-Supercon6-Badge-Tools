@@ -9,17 +9,17 @@ mov [0xF0], r0
 ; mov [0xF1], r0
 
 main:     ; The main loop of the program.
-gosub pulse_off
 mov r1, 0       ; Zero out R1
 mov r0, [0x0B]  ; Read input pin status into R0
 bit r0, 1       ; If first bit of R0 is 0, set Z flag
 skip nz, 1      ; Skip next line if Z is NOT set
 goto pulse_on
+gosub clear_disp
 goto main
 
 clear_disp:
-; clear screen first
-; blank the matrix first for a fresh draw
+mov r0, 2        ; Force to page 2 (Graphics)
+mov [0xF0], r0
 mov r0, 0
 mov r7, 0
 mov r5, 0
@@ -30,16 +30,9 @@ mov [r4:r5], r0
 inc r5
 dsz r7
 jr -5
-
-ret r0, 0
-
-pulse_off:
-gosub clear_disp
 ret r0, 0
 
 pulse_on:
-; clear screen first
-; blank the matrix first for a fresh draw
 gosub clear_disp
 
 mov r5, 0b0011   ; Left side of icon 
@@ -61,8 +54,6 @@ mov [3:11], r0   ;
 mov [2:11], r0   ;
 
 goto main
-
-
 
 ; mov r1, 0       ; Zero out R1
 ; mov r0, [0x0B]  ; Read input pin status into R0
